@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Your notebook</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Your notebook</h1>
+        <div class="text-wrapper">
+        <p>Create a list of films, series or books you have already watched/read or plan to, add a description and your opinion on it</p>
+    </div>
+    <div class="form-wrapper">
+        <img src="https://www.looper.com/img/gallery/things-only-adults-notice-in-sailor-moon/intro-1574273828.jpg" alt="Sailor moon" />
+        <form class="form" id="auth-form">
+            <input type="text" required name="login" placeholder="Login" />
+            <input type="password" required name="password" placeholder="Password" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div class="buttons-wrapper">
+        <button id="films">Films</button>
+        <button id="series">Series</button>
+        <button id="books">Books</button>
+    </div>
+    <div class="lists-wrapper">
+        <div>
+            <h2>Favorite films</h2>
+            <ul id="films-list"></ul>
+        </div>
+        <div>
+            <h2>Favorite series</h2>
+            <ul id="series-list"></ul>
+        </div>
+        <div>
+            <h2>Favorite books</h2>
+            <ul id="books-list"></ul>
+        </div>
+    </div>
+    </div>
+    <div class="overlay" id="modal">
+        <div class="films-modal">
+            <div class="modal-header" id="modal-header">
+                <div class="modal-title" id="modal-title">Favorite films</div>
+                <div class="modal-close-icon" id="closeIcon">X</div>
+            </div>
+            <form class="films-form" id="form">
+                <input type="text" required name="name" id="film-name" placeholder="Write film name" />
+                <textarea name="description" required id="description" cols="30" rows="10" placeholder="Write details"></textarea>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
